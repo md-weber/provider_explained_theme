@@ -7,16 +7,9 @@ class ThemeProvider extends ChangeNotifier {
   Typography defaultTypography;
   SharedPreferences prefs;
 
-  ThemeData dark = ThemeData.dark().copyWith(
-    accentColor: Colors.yellowAccent.shade700,
-    buttonColor: Colors.yellow.shade800,
-  );
+  ThemeData dark = ThemeData.dark().copyWith();
 
-  ThemeData light = ThemeData.light().copyWith(
-    primaryColor: Colors.blue.shade900,
-    accentColor: Colors.blue.shade500,
-    buttonColor: Colors.blue.shade900,
-  );
+  ThemeData light = ThemeData.light().copyWith();
 
   ThemeProvider(bool darkThemeOn) {
     _selectedTheme = darkThemeOn ? dark : light;
