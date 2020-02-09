@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+import '../theme.dart';
 import 'lobby_screen.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -8,6 +10,15 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Login Screen"),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.brightness_6),
+            color: Colors.white,
+            onPressed: () {
+              Provider.of<ThemeProvider>(context, listen: false).swapTheme();
+            },
+          )
+        ],
       ),
       body: Container(
         child: Column(
